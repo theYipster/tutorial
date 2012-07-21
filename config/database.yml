@@ -16,9 +16,10 @@ development:
   adapter: postgresql
   encoding: unicode
   database: tutorial_development
+  host: localhost
   pool: 5
-  username: tutorial
-  password:
+  username: postgres
+  password: postgres
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -42,17 +43,18 @@ test: &test
   adapter: postgresql
   encoding: unicode
   database: tutorial_test
+  host: localhost
   pool: 5
-  username: tutorial
-  password:
+  username: postgres
+  password: postgres
 
 production:
   adapter: postgresql
   encoding: unicode
   database: tutorial_production
   pool: 5
-  username: tutorial
-  password:
+  username: postgres
+  password: postgres
 
 cucumber:
   <<: *test
